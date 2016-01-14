@@ -1,5 +1,30 @@
-[2016-01-14 11:11:13]tcp://180.168.146.187:10010
-[2016-01-14 11:11:13]tcp://180.168.146.187:10000
-[2016-01-14 11:11:13]rb1605,TF1603,m1605
-[2016-01-14 11:11:13]9999
-[2016-01-14 11:11:13]034023
+[2016-01-14 21:12:30]tcp://180.168.146.187:10010
+[2016-01-14 21:12:30]tcp://180.168.146.187:10000
+[2016-01-14 21:12:30]rb1605,TF1603,m1605
+[2016-01-14 21:12:30]9999
+[2016-01-14 21:12:30]034023
+[2016-01-14 21:12:30](Hint)(OnFrontConnected)Successed!
+[2016-01-14 21:12:30][Hint][OnFrontConnected]Successed!
+[2016-01-14 21:12:30]ReqUserLogin ... Successed!
+[2016-01-14 21:12:30][Hint][ReqUserLogin]Successed!
+[2016-01-14 21:12:30](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-01-14 21:12:30](Hint)(OnRspUserLogin)Successed!
+[2016-01-14 21:12:30]SubscribeMarketData ... Successed!
+[2016-01-14 21:12:30][Hint][OnRspUserLogin]Successed!
+[2016-01-14 21:12:30] ReqSettlementInfoConfirm ... Successed!
+[2016-01-14 21:12:30] OnRspSettlementInfoConfirm ... Successed! 
+[2016-01-14 21:20:34]tcp://180.168.146.187:10010
+[2016-01-14 21:20:34]tcp://180.168.146.187:10000
+[2016-01-14 21:20:34]rb1605,TF1603,m1605
+[2016-01-14 21:20:34]9999
+[2016-01-14 21:20:34]034023
+[2016-01-14 21:20:34][Hint][OnFrontConnected]Successed!
+[2016-01-14 21:20:34](Hint)(OnFrontConnected)Successed!
+[2016-01-14 21:20:34][Hint][ReqUserLogin]Successed!
+[2016-01-14 21:20:34]ReqUserLogin ... Successed!
+[2016-01-14 21:20:34](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-01-14 21:20:34](Hint)(OnRspUserLogin)Successed!
+[2016-01-14 21:20:34]SubscribeMarketData ... Successed!
+[2016-01-14 21:20:34][Hint][OnRspUserLogin]Successed!
+[2016-01-14 21:20:34][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-01-14 21:20:34][Hint][OnRspSettlementInfoConfirm]Successed! 

@@ -39,7 +39,7 @@ extern HWND hLbl[20];
 
 void CtpTraderSpi::OnFrontConnected()
 {
-	WriteLog("OnFrontConnected ... Successed!");
+	WriteLog("[Hint][OnFrontConnected]Successed!");
 	//setLvRunLog(hLvRunLog,"OnFrontConnected","","","Successed","");
 	pTraderUserSpi->ReqUserLogin(GUserInfo.BrokerID,GUserInfo.UserID,GUserInfo.Password);
 	SetEvent(g_hEvent);
@@ -57,9 +57,9 @@ void CtpTraderSpi::ReqUserLogin(TThostFtdcBrokerIDType	vbrokerId,
 	int ret = pTraderUserApi->ReqUserLogin(&req, ++g_request_id);
 
 	if(ret != 0)
-		WriteLog("ReqUserLogin ... Failed!");
+		WriteLog("[Warning][ReqUserLogin]Failed!");
 	else
-		WriteLog("ReqUserLogin ... Successed!");
+		WriteLog("[Hint][ReqUserLogin]Successed!");
 }
 
 void CtpTraderSpi::ReqQryInvestorPosition(TThostFtdcInstrumentIDType instId)
@@ -72,9 +72,9 @@ void CtpTraderSpi::ReqQryInvestorPosition(TThostFtdcInstrumentIDType instId)
 	strcpy(req.InstrumentID, instId);	
 	int ret = pTraderUserApi->ReqQryInvestorPosition(&req, ++g_request_id);
 	if (ret != 0)
-		WriteLog("ReqQryInvestorPosition ... Failed!");
+		WriteLog("[Warning][ReqQryInvestorPosition]Failed!");
 	else
-		WriteLog("ReqQryInvestorPosition ... Successed!");
+		WriteLog("[Hint][ReqQryInvestorPosition]Successed!");
 	//vecIPF.clear();
 }
 
@@ -95,15 +95,13 @@ void CtpTraderSpi::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin,
 		sessionId = pRspUserLogin->SessionID;
 		int nextOrderRef = atoi(pRspUserLogin->MaxOrderRef);
 		sprintf(orderRef, "%d", ++nextOrderRef);
-		WriteLog(" OnRspUserLogin ... Successed!");
+		WriteLog("[Hint][OnRspUserLogin]Successed!");
 		//确认结算
 		ReqSettlementInfoConfirm();
 	}
 	else
 	{
-		stringstream ss;
-		ss << " OnRspUserLogin ... Failed! ";
-		WriteLog(ss.str());
+		WriteLog("[Warning][OnRspUserLogin]Failed! ");
 	}
 	if(bIsLast) SetEvent(g_hEvent);
 }
@@ -116,9 +114,9 @@ void CtpTraderSpi::ReqSettlementInfoConfirm()
 	strcpy(req.InvestorID, GUserInfo.UserID);
 	int ret = pTraderUserApi->ReqSettlementInfoConfirm(&req, ++g_request_id);
 	if (ret != 0)
-		WriteLog(" ReqSettlementInfoConfirm ... Failed!");
+		WriteLog("[Warning][ReqSettlementInfoConfirm]Failed!");
 	else
-		WriteLog(" ReqSettlementInfoConfirm ... Successed!");
+		WriteLog("[Hint][ReqSettlementInfoConfirm]Successed!");
 }
 
 void CtpTraderSpi::OnRspSettlementInfoConfirm(
@@ -127,11 +125,7 @@ void CtpTraderSpi::OnRspSettlementInfoConfirm(
 {	
 	if( !IsErrorRspInfo(pRspInfo) && pSettlementInfoConfirm)
 	{
-		string sTemp = pSettlementInfoConfirm->InvestorID ;
-
-		stringstream ss;
-		ss << " OnRspSettlementInfoConfirm ... Successed! ";
-		WriteLog(ss.str());
+		WriteLog("[Hint][OnRspSettlementInfoConfirm]Successed! ");
 
 		//ReqQryTradingAccount();
 		//ReqQryInvestorPosition("rb1601");
@@ -140,7 +134,7 @@ void CtpTraderSpi::OnRspSettlementInfoConfirm(
 	else
 	{
 		stringstream ss;
-		ss << " OnRspUserLogin ... failed! " << pRspInfo->ErrorID << pRspInfo->ErrorMsg << endl;
+		ss << "[Waring][OnRspSettlementInfoConfirm]Failed! " << pRspInfo->ErrorID << pRspInfo->ErrorMsg << endl;
 		WriteLog(ss.str());
 	}
 	if(bIsLast) SetEvent(g_hEvent);
@@ -153,9 +147,9 @@ void CtpTraderSpi::ReqQryInstrument(TThostFtdcInstrumentIDType instId)
 	strcpy(req.InstrumentID, instId);//为空表示查询所有合约
 	int ret = pTraderUserApi->ReqQryInstrument(&req, ++g_request_id);
 	if (ret != 0)
-		WriteLog("ReqQryInstrument ... Failed!");
+		WriteLog("[Warning][ReqQryInstrument]Failed!");
 	else
-		WriteLog(" 请求 | 发送合约查询...成功");
+		WriteLog("[Hint][ReqQryInstrument]Successed!");
 }
 
 void CtpTraderSpi::OnRspQryInstrument(CThostFtdcInstrumentField *pInstrument, 
@@ -180,9 +174,9 @@ void CtpTraderSpi::ReqQryTradingAccount()
 	strcpy(req.InvestorID, GUserInfo.UserID);
 	int ret = pTraderUserApi->ReqQryTradingAccount(&req, ++g_request_id);
 	if (ret != 0)
-		WriteLog("ReqQryTradingAccount ... Failed!");
+		WriteLog("[Hint][ReqQryTradingAccount]Failed!");
 	else
-		WriteLog("ReqQryTradingAccount ... Successed!");
+		WriteLog("[Hint][ReqQryTradingAccount]Successed!");
 }
 
 void CtpTraderSpi::OnRspQryTradingAccount(
@@ -193,7 +187,7 @@ void CtpTraderSpi::OnRspQryTradingAccount(
 	{
 		
 		stringstream ss;
-		ss << "<动态权益：" << std::fixed << pTradingAccount->Balance
+		ss << "[Hint][OnRspQryTradingAccount]<动态权益：" << std::fixed << pTradingAccount->Balance
 			<< "; 可用资金： " << std::fixed << pTradingAccount->Available
 			<<"; 占用保证金： "<<pTradingAccount->CurrMargin
 			<<"; 持仓盈亏： "<<pTradingAccount->PositionProfit 
@@ -205,7 +199,7 @@ void CtpTraderSpi::OnRspQryTradingAccount(
 		//setLvRunLog(hLvRunLog, "OnRspQryTradingAccount", "", "", sTemp, "");
   }
   else
-	  WriteLog("OnRspQryTradingAccount ... Failed!");
+	  WriteLog("[Hint][OnRspQryTradingAccount]Failed!");
   if(bIsLast) SetEvent(g_hEvent);
 }
 
@@ -291,10 +285,9 @@ void CtpTraderSpi::OnRspQryInvestorPositionDetail(
   }
   if(bIsLast) 
   {
-	  showPrice(hLbl[22],GTradingInfo.LastPrice);
-	  showPrice(hLbl[23],GTradingInfo.BuyPosition);
-	  showPrice(hLbl[24],GTradingInfo.SellPosition);
-
+	  stringstream ss;
+	  ss << "[Hint][OnRspQryInvestorPositionDetail]买持仓：" << GTradingInfo.BuyPosition << "；卖持仓：" << GTradingInfo.SellPosition << endl;
+	  WriteLog(ss.str());
 	  SetEvent(g_hEvent);
 	}
 }
