@@ -288,20 +288,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			break;
 		case IDD_BTN1:
 			{
-				//MessageBox(hWnd, L"您点击了第一个按钮。",L"提示",MB_OK | MB_ICONINFORMATION);
-				//gEnableFlag = !gEnableFlag;
-				//if (gEnableFlag)
-				//	SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"已启动");
-				//else
-				//	SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"未启动");
-				//pTraderUserSpi->ReqQryInvestorPosition("rb1601");
-				//gBuyPosition = 0;
-				//gSellPosition = 0;
 				//pTraderUserSpi->ReqQryInvestorPositionDetail(vcInstIDlist[0]);
-				//showText(hLbl[21],vcInstIDlist[0]);
-				//showPrice(hLbl[22],gLastPrice);
-				//showPrice(hLbl[23],gBuyPosition);
-				//showPrice(hLbl[24],gSellPosition);
 
 				//CThostFtdcQryOrderField* pQryOrder = new CThostFtdcQryOrderField();
 				//strcpy(pQryOrder->g_broker_id,g_broker_id);
@@ -309,9 +296,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				//strcpy(pQryOrder->InvestorID,g_user_id);
 
 				//pTraderUserApi->ReqQryOrder(pQryOrder, g_request_id); 
-				//ExecuteSelect();
-			
+
 				MessageBox(hWnd,L"gLastPrice is zero !",L"Warning",NULL);
+			}
+			break;
+		case IDD_BTN2:
+			{
+				SendMessage(hTxt[1],WM_SETTEXT,0,(LPARAM)L"999888");
+			}
+			break;
+		case IDD_BTN3:
+			{
+				wchar_t szPwd[20];
+				WPARAM wParam=sizeof(szPwd);
+				LPARAM lParam=(LPARAM)szPwd;
+				memset(szPwd,0,sizeof(szPwd));
+				SendMessage(hTxt[1],WM_GETTEXT,wParam,lParam);
+				MessageBox(hWnd,szPwd,L"Pwd",NULL);
 			}
 			break;
 		default:
