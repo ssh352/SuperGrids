@@ -18,6 +18,7 @@ extern CtpMdSpi* pMdUserSpi;
 extern CThostFtdcBrokerUserPasswordField GUserInfo;
 
 extern vector<CThostFtdcInvestorPositionDetailField*> posiDetailList;
+extern vector<CThostFtdcDepthMarketDataField>  vcMarketData;
 
 extern HANDLE g_hEvent;
 extern HWND hLbl[20] ;
@@ -110,9 +111,30 @@ void CtpMdSpi::OnRspUnSubMarketData(
 	if(bIsLast)  SetEvent(g_hEvent);
 }
 
+void SaveDataVec(CThostFtdcDepthMarketDataField *pDepthMarketData)
+{
+	CThostFtdcDepthMarketDataField pDepthMarketDataTemp;
+	memset(&pDepthMarketDataTemp, 0, sizeof(pDepthMarketDataTemp));
+	strcpy(pDepthMarketDataTemp.InstrumentID, pDepthMarketData->InstrumentID);
+	strcpy(pDepthMarketDataTemp.TradingDay, pDepthMarketData->TradingDay);
+	strcpy(pDepthMarketDataTemp.UpdateTime, pDepthMarketData->UpdateTime);
+	pDepthMarketDataTemp.UpdateMillisec = pDepthMarketData->UpdateMillisec;
+	pDepthMarketDataTemp.LastPrice = pDepthMarketData->LastPrice;
+	pDepthMarketDataTemp.AskPrice1 = pDepthMarketData->AskPrice1;
+	pDepthMarketDataTemp.AskVolume1 = pDepthMarketData->AskVolume1;
+	pDepthMarketDataTemp.BidPrice1 = pDepthMarketData->BidPrice1;
+	pDepthMarketDataTemp.BidVolume1 = pDepthMarketData->BidVolume1;
+	pDepthMarketDataTemp.Volume = pDepthMarketData->Volume;
+	pDepthMarketDataTemp.OpenInterest = pDepthMarketData->OpenInterest;
+
+	vcMarketData.push_back(pDepthMarketDataTemp);	
+
+}
 
 void CtpMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData)
 {
+	SaveDataVec(pDepthMarketData);
+
 	string filename = pDepthMarketData->InstrumentID ;
 	filename += ".csv";
 	ofstream datafile;

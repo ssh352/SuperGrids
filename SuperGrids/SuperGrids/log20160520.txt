@@ -1,0 +1,223 @@
+[2016-05-20 21:56:31]tcp://180.168.146.187:10010
+[2016-05-20 21:56:31]tcp://180.168.146.187:10000
+[2016-05-20 21:56:31]rb1605,TF1603,m1605
+[2016-05-20 21:56:31]9999
+[2016-05-20 21:56:31]034023
+[2016-05-20 21:56:31](Hint)(OnFrontConnected)Successed!
+[2016-05-20 21:56:31]ReqUserLogin ... Successed!
+[2016-05-20 21:56:31](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 21:56:31](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 21:56:31]SubscribeMarketData ... Successed!
+[2016-05-20 21:56:34][Hint][OnFrontConnected]Successed!
+[2016-05-20 21:56:34][Hint][ReqUserLogin]Successed!
+[2016-05-20 21:56:34][Hint][OnRspUserLogin]Successed!
+[2016-05-20 21:56:34][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 21:56:34][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 21:57:38]tcp://180.168.146.187:10010
+[2016-05-20 21:57:38]tcp://180.168.146.187:10000
+[2016-05-20 21:57:38]rb1605,TF1603,m1605
+[2016-05-20 21:57:38]9999
+[2016-05-20 21:57:38]034023
+[2016-05-20 21:57:38](Hint)(OnFrontConnected)Successed!
+[2016-05-20 21:57:38]ReqUserLogin ... Successed!
+[2016-05-20 21:57:38][Hint][OnFrontConnected]Successed!
+[2016-05-20 21:57:38][Hint][ReqUserLogin]Successed!
+[2016-05-20 21:57:38](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 21:57:38](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 21:57:38]SubscribeMarketData ... Successed!
+[2016-05-20 21:57:38][Hint][OnRspUserLogin]Successed!
+[2016-05-20 21:57:38][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 21:57:39][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 21:59:48]tcp://180.168.146.187:10010
+[2016-05-20 21:59:48]tcp://180.168.146.187:10000
+[2016-05-20 21:59:48]rb1605,TF1603,m1605
+[2016-05-20 21:59:48]9999
+[2016-05-20 21:59:48]034023
+[2016-05-20 21:59:48](Hint)(OnFrontConnected)Successed!
+[2016-05-20 21:59:48]ReqUserLogin ... Successed!
+[2016-05-20 21:59:48](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 21:59:48](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 21:59:48]SubscribeMarketData ... Successed!
+[2016-05-20 21:59:48][Hint][OnFrontConnected]Successed!
+[2016-05-20 21:59:48][Hint][ReqUserLogin]Successed!
+[2016-05-20 21:59:48][Hint][OnRspUserLogin]Successed!
+[2016-05-20 21:59:48][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 21:59:49][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:01:23]tcp://180.168.146.187:10010
+[2016-05-20 22:01:23]tcp://180.168.146.187:10000
+[2016-05-20 22:01:23]rb1605,TF1603,m1605
+[2016-05-20 22:01:23]9999
+[2016-05-20 22:01:23]034023
+[2016-05-20 22:01:23][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:01:23](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:01:23][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:01:23](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:01:23](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:01:23]SubscribeMarketData ... Successed!
+[2016-05-20 22:01:23][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:01:23][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:01:23][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:06:23]tcp://180.168.146.187:10010
+[2016-05-20 22:06:23]tcp://180.168.146.187:10000
+[2016-05-20 22:06:23]rb1605,TF1603,m1605
+[2016-05-20 22:06:23]9999
+[2016-05-20 22:06:23]034023
+[2016-05-20 22:06:23][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:06:23](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:06:23][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:06:23][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:06:23][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:06:23][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:06:23](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:06:23](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:06:23]SubscribeMarketData ... Successed!
+[2016-05-20 22:06:28][Error][IsErrorRspInfo]15CTP:报单字段有误
+[2016-05-20 22:06:28][Error][OnRspOrderInsert]15CTP:报单字段有误;InstrumentID:rb1605;Direction:1;CombOffsetFlag:0;VolumeTotalOriginal:0
+[2016-05-20 22:06:28][Error][IsErrorRspInfo]15CTP:报单字段有误
+[2016-05-20 22:06:28][Error][OnRspOrderInsert]15CTP:报单字段有误;InstrumentID:rb1605;Direction:0;CombOffsetFlag:0;VolumeTotalOriginal:0
+[2016-05-20 22:07:26]tcp://180.168.146.187:10010
+[2016-05-20 22:07:26]tcp://180.168.146.187:10000
+[2016-05-20 22:07:26]rb1605,TF1603,m1605
+[2016-05-20 22:07:26]9999
+[2016-05-20 22:07:26]034023
+[2016-05-20 22:07:26](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:07:26]ReqUserLogin ... Successed!
+[2016-05-20 22:07:26](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:07:26](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:07:26]SubscribeMarketData ... Successed!
+[2016-05-20 22:07:26][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:07:26][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:07:26][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:07:26][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:07:26][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:07:32][Error][IsErrorRspInfo]15CTP:报单字段有误
+[2016-05-20 22:07:32][Error][OnRspOrderInsert]15CTP:报单字段有误;InstrumentID:rb1605;Direction:1;CombOffsetFlag:0;VolumeTotalOriginal:0
+[2016-05-20 22:07:32][Error][IsErrorRspInfo]15CTP:报单字段有误
+[2016-05-20 22:07:32][Error][OnRspOrderInsert]15CTP:报单字段有误;InstrumentID:rb1605;Direction:0;CombOffsetFlag:0;VolumeTotalOriginal:0
+[2016-05-20 22:08:48]tcp://180.168.146.187:10010
+[2016-05-20 22:08:48]tcp://180.168.146.187:10000
+[2016-05-20 22:08:48]MA609,m1609
+[2016-05-20 22:08:48]9999
+[2016-05-20 22:08:48]034023
+[2016-05-20 22:08:48](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:08:48][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:08:48]ReqUserLogin ... Successed!
+[2016-05-20 22:08:48][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:08:48](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:08:48](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:08:48]SubscribeMarketData ... Successed!
+[2016-05-20 22:08:48][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:08:48][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:08:48][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:08:49][Error][IsErrorRspInfo]15CTP:报单字段有误
+[2016-05-20 22:08:49][Error][OnRspOrderInsert]15CTP:报单字段有误;InstrumentID:MA609;Direction:1;CombOffsetFlag:0;VolumeTotalOriginal:0
+[2016-05-20 22:08:49][Error][IsErrorRspInfo]15CTP:报单字段有误
+[2016-05-20 22:08:49][Error][OnRspOrderInsert]15CTP:报单字段有误;InstrumentID:MA609;Direction:0;CombOffsetFlag:0;VolumeTotalOriginal:0
+[2016-05-20 22:10:27]tcp://180.168.146.187:10010
+[2016-05-20 22:10:27]tcp://180.168.146.187:10000
+[2016-05-20 22:10:27]MA609,m1609
+[2016-05-20 22:10:27]9999
+[2016-05-20 22:10:27]034023
+[2016-05-20 22:10:27](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:10:27]ReqUserLogin ... Successed!
+[2016-05-20 22:10:27](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:10:27](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:10:27]SubscribeMarketData ... Successed!
+[2016-05-20 22:10:27][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:10:27][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:10:27][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:10:27][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:10:27][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:13:05]tcp://180.168.146.187:10010
+[2016-05-20 22:13:05]tcp://180.168.146.187:10000
+[2016-05-20 22:13:05]MA609,m1609
+[2016-05-20 22:13:05]9999
+[2016-05-20 22:13:05]034023
+[2016-05-20 22:13:05](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:13:05]ReqUserLogin ... Successed!
+[2016-05-20 22:13:06][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:13:06][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:13:06][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:13:06][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:13:06][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:13:06](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:13:06](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:13:06]SubscribeMarketData ... Successed!
+[2016-05-20 22:14:57]tcp://180.168.146.187:10010
+[2016-05-20 22:14:57]tcp://180.168.146.187:10000
+[2016-05-20 22:14:57]MA609,m1609
+[2016-05-20 22:14:57]9999
+[2016-05-20 22:14:57]034023
+[2016-05-20 22:14:57][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:14:57][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:14:57](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:14:57]ReqUserLogin ... Successed!
+[2016-05-20 22:14:57][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:14:57][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:14:57](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:14:57](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:14:57]SubscribeMarketData ... Successed!
+[2016-05-20 22:14:57][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:25:01]tcp://180.168.146.187:10010
+[2016-05-20 22:25:01]tcp://180.168.146.187:10000
+[2016-05-20 22:25:01]MA609,m1609
+[2016-05-20 22:25:01]9999
+[2016-05-20 22:25:01]034023
+[2016-05-20 22:25:01](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:25:01][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:25:01][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:25:01]ReqUserLogin ... Successed!
+[2016-05-20 22:25:01][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:25:01](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:25:01][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:25:01](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:25:01]SubscribeMarketData ... Successed!
+[2016-05-20 22:25:01][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:27:37]tcp://180.168.146.187:10010
+[2016-05-20 22:27:37]tcp://180.168.146.187:10000
+[2016-05-20 22:27:37]MA609,m1609
+[2016-05-20 22:27:37]9999
+[2016-05-20 22:27:37]034023
+[2016-05-20 22:27:38](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:27:38]ReqUserLogin ... Successed!
+[2016-05-20 22:27:38][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:27:38][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:27:38](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:27:38](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:27:38]SubscribeMarketData ... Successed!
+[2016-05-20 22:27:38][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:27:38][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:27:38][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:35:20]tcp://180.168.146.187:10010
+[2016-05-20 22:35:20]tcp://180.168.146.187:10000
+[2016-05-20 22:35:20]MA609,m1609
+[2016-05-20 22:35:20]9999
+[2016-05-20 22:35:20]034023
+[2016-05-20 22:35:20][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:35:20](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:35:20][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:35:21](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:35:21](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:35:21][Hint][OnRspUserLogin]Successed!
+
+[2016-05-20 22:35:21][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:35:21][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:35:22][Hint][OnRspQryInvestorPositionDetail]买持仓：0；卖持仓：0
+
+[2016-05-20 22:36:10]tcp://180.168.146.187:10010
+[2016-05-20 22:36:10]tcp://180.168.146.187:10000
+[2016-05-20 22:36:10]MA609,m1609
+[2016-05-20 22:36:10]9999
+[2016-05-20 22:36:10]034023
+[2016-05-20 22:36:10](Hint)(OnFrontConnected)Successed!
+[2016-05-20 22:36:10]ReqUserLogin ... Successed!
+[2016-05-20 22:36:10][Hint][OnFrontConnected]Successed!
+[2016-05-20 22:36:10][Hint][ReqUserLogin]Successed!
+[2016-05-20 22:36:10](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-05-20 22:36:10](Hint)(OnRspUserLogin)Successed!
+[2016-05-20 22:36:10]SubscribeMarketData ... Successed!
+[2016-05-20 22:36:10][Hint][OnRspUserLogin]Successed!
+[2016-05-20 22:36:10][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-05-20 22:36:10][Hint][OnRspSettlementInfoConfirm]Successed! 
+[2016-05-20 22:36:12][Hint][OnRspQryInvestorPositionDetail]买持仓：4；卖持仓：0
+

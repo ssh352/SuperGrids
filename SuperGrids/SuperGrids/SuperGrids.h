@@ -40,5 +40,6 @@ HWND hLv;
 
 vector<string> vcLog;
 vector<char*>  vcInstIDlist;
+vector<CThostFtdcDepthMarketDataField>  vcMarketData;
 
 #endif

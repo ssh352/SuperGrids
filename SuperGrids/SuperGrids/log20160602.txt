@@ -1,0 +1,15 @@
+[2016-06-02 22:23:32]tcp://180.168.146.187:10010
+[2016-06-02 22:23:32]tcp://180.168.146.187:10000
+[2016-06-02 22:23:32]rb1605,TF1603,m1605
+[2016-06-02 22:23:32]9999
+[2016-06-02 22:23:32]034023
+[2016-06-02 22:23:32][Hint][OnFrontConnected]Successed!
+[2016-06-02 22:23:32](Hint)(OnFrontConnected)Successed!
+[2016-06-02 22:23:32][Hint][ReqUserLogin]Successed!
+[2016-06-02 22:23:32]ReqUserLogin ... Successed!
+[2016-06-02 22:23:32][Hint][OnRspUserLogin]Successed!
+[2016-06-02 22:23:32][Hint][ReqSettlementInfoConfirm]Successed!
+[2016-06-02 22:23:32](Error)(IsErrorRspInfo)0CTP:No Error
+[2016-06-02 22:23:32](Hint)(OnRspUserLogin)Successed!
+[2016-06-02 22:23:32]SubscribeMarketData ... Successed!
+[2016-06-02 22:23:32][Hint][OnRspSettlementInfoConfirm]Successed! 
