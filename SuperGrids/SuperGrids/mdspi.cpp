@@ -115,17 +115,7 @@ void SaveDataVec(CThostFtdcDepthMarketDataField *pDepthMarketData)
 {
 	CThostFtdcDepthMarketDataField pDepthMarketDataTemp;
 	memset(&pDepthMarketDataTemp, 0, sizeof(pDepthMarketDataTemp));
-	strcpy(pDepthMarketDataTemp.InstrumentID, pDepthMarketData->InstrumentID);
-	strcpy(pDepthMarketDataTemp.TradingDay, pDepthMarketData->TradingDay);
-	strcpy(pDepthMarketDataTemp.UpdateTime, pDepthMarketData->UpdateTime);
-	pDepthMarketDataTemp.UpdateMillisec = pDepthMarketData->UpdateMillisec;
-	pDepthMarketDataTemp.LastPrice = pDepthMarketData->LastPrice;
-	pDepthMarketDataTemp.AskPrice1 = pDepthMarketData->AskPrice1;
-	pDepthMarketDataTemp.AskVolume1 = pDepthMarketData->AskVolume1;
-	pDepthMarketDataTemp.BidPrice1 = pDepthMarketData->BidPrice1;
-	pDepthMarketDataTemp.BidVolume1 = pDepthMarketData->BidVolume1;
-	pDepthMarketDataTemp.Volume = pDepthMarketData->Volume;
-	pDepthMarketDataTemp.OpenInterest = pDepthMarketData->OpenInterest;
+	pDepthMarketDataTemp = *pDepthMarketData;
 
 	vcMarketData.push_back(pDepthMarketDataTemp);	
 
@@ -135,16 +125,7 @@ void CtpMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarket
 {
 	SaveDataVec(pDepthMarketData);
 
-	string filename = pDepthMarketData->InstrumentID ;
-	filename += ".csv";
-	ofstream datafile;
-	datafile.open(filename,ios::app);
-	datafile << pDepthMarketData->InstrumentID << "," << pDepthMarketData->TradingDay 
-	<< "," << pDepthMarketData->UpdateTime<< "," << pDepthMarketData->UpdateMillisec
-	<< "," << pDepthMarketData->LastPrice <<  "," << pDepthMarketData->AskPrice1 
-	<< "," << pDepthMarketData->AskVolume1 << "," << pDepthMarketData->BidPrice1 
-	<< "," << pDepthMarketData->BidVolume1 << "," << pDepthMarketData->OpenInterest <<endl;
-	datafile.close();
+
 	//UpdateWindow(hWnd);
 }
 

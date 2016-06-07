@@ -25,6 +25,8 @@ CtpMdSpi* pMdUserSpi=new CtpMdSpi(pMdUserApi); //创建回调处理类对象MdSpi
 CThostFtdcTraderApi* pTraderUserApi = CThostFtdcTraderApi::CreateFtdcTraderApi();
 CtpTraderSpi* pTraderUserSpi = new CtpTraderSpi(pTraderUserApi);
 
+				CThostFtdcDepthMarketDataField mdf1,mdf2;
+
 // 全局变量:
 HINSTANCE hInst;								// 当前实例
 TCHAR szTitle[MAX_LOADSTRING];					// 标题栏文本
@@ -35,6 +37,30 @@ ATOM				MyRegisterClass(HINSTANCE hInstance);
 BOOL				InitInstance(HINSTANCE, int);
 LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
+
+VOID CALLBACK TimerProc(HWND hwnd,UINT uMsg,UINT idEvent,DWORD dwTime);
+
+VOID CALLBACK TimerProc(HWND hwnd,UINT uMsg,UINT idEvent,DWORD dwTime)
+{
+	//MessageBox(hWnd,L" TimerProc !",L"TimerProc",NULL);
+	string filename = "_____.csv";
+	ofstream datafile;
+	datafile.open(filename,ios::app);
+	for(vector<CThostFtdcDepthMarketDataField>::iterator it  = vcMarketData.begin(); it != vcMarketData.end(); )  
+    {  
+		if(it->AskPrice5 != -1.0)
+		{
+			datafile << it->InstrumentID << "," << it->TradingDay 
+			<< "," << it->UpdateTime<< "," << it->UpdateMillisec
+			<< "," << it->LastPrice <<  "," << it->AskPrice1 
+			<< "," << it->AskVolume1 << "," << it->BidPrice1 
+			<< "," << it->BidVolume1 << "," << it->OpenInterest <<endl;
+		}
+		vcMarketData.erase(it);  
+    }  
+	datafile.close();
+}
+
 
 void RunMD()
 {
@@ -159,6 +185,10 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	HANDLE hThread2;
 	hThread1=CreateThread(NULL,0,MdProc,NULL,0,NULL);
 	hThread2=CreateThread(NULL,0,TraderProc,NULL,0,NULL);
+
+	//MessageBox(hWnd,L" SetTimer !",L"SetTimer",NULL);
+	int timer1 = 1;
+	SetTimer(NULL,timer1,5000,TimerProc);
 
 	// 主消息循环:
 	while (GetMessage(&msg, NULL, 0, 0))
@@ -297,7 +327,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 				//pTraderUserApi->ReqQryOrder(pQryOrder, g_request_id); 
 
-				MessageBox(hWnd,L"gLastPrice is zero !",L"Warning",NULL);
+				memset(&mdf1,0,sizeof(CThostFtdcDepthMarketDataField));
+				//memset(&mdf2,0,sizeof(CThostFtdcDepthMarketDataField));
+				mdf1.AskPrice1 = 1.111;
+				strcpy(mdf1.ActionDay, "2016-01-01");
+				mdf2 = mdf1;
+				mdf2.BidPrice1 = 333;
+
+
+				MessageBox(hWnd,L"66666 is zero !",L"Warning",NULL);
 			}
 			break;
 		case IDD_BTN2:

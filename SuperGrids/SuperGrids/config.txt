@@ -1,4 +1,4 @@
-instrument_id_list=rb1605,TF1603,m1605
+instrument_id_list=rb1610,TF1609,m1609,MA609
 #下面是模拟环境
 md_ip=tcp://180.168.146.187:10010
 td_ip=tcp://180.168.146.187:10000
