@@ -19,9 +19,13 @@
 #include "traderspi.h"
 #include "common.h"
 #include "resource.h"
+#include "sqlite3.h"
+#include "dbhelper.h"
 
 using namespace std;
 
+char dbFile[] = "trxdb.db";//数据库文件路径及名称
+sqlite3 * pDB;
 HANDLE g_hEvent;
 
 int g_request_id=0;
@@ -33,7 +37,7 @@ CThostFtdcBrokerUserPasswordField GUserInfo;
 TradingInfo GTradingInfo;
 
 HWND hWnd;
-HWND hTxt[2];
+HWND hTxt[3];
 HWND hLbl[2];
 HWND hBtn[4];
 HWND hLv;
@@ -41,5 +45,7 @@ HWND hLv;
 vector<string> vcLog;
 vector<char*>  vcInstIDlist;
 vector<CThostFtdcDepthMarketDataField>  vcMarketData;
+
+string sLog = "";
 
 #endif

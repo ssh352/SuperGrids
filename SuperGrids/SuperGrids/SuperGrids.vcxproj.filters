@@ -60,6 +60,12 @@
     <ClInclude Include="traderspi.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="sqlite3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dbhelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -75,6 +81,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="traderspi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dbhelper.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

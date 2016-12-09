@@ -22,6 +22,7 @@ extern vector<CThostFtdcDepthMarketDataField>  vcMarketData;
 
 extern HANDLE g_hEvent;
 extern HWND hLbl[20] ;
+extern HWND hTxt[3] ;
 extern HWND hWnd;
 
 extern char* g_inst_id_list;
@@ -65,7 +66,10 @@ void CtpMdSpi::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin,
 		CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
 {
 	if (!IsErrorRspInfo(pRspInfo) && pRspUserLogin)
+	{
 		WriteLog("(Hint)(OnRspUserLogin)Successed!");
+		SendMessage(hTxt[2],WM_SETTEXT,0,(LPARAM)L"ÐÐÇéÒÑµÇÂ¼");
+	}
 	else
 		WriteLog("(Error)(OnRspUserLogin)Failed!");
 
@@ -124,7 +128,6 @@ void SaveDataVec(CThostFtdcDepthMarketDataField *pDepthMarketData)
 void CtpMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData)
 {
 	SaveDataVec(pDepthMarketData);
-
 
 	//UpdateWindow(hWnd);
 }

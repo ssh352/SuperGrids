@@ -1,30 +1,31 @@
-﻿生成启动时间为 2016/1/14 21:20:32。
-     1>项目“D:\BeoData\sourcecode\githome\SuperGrids\SuperGrids\SuperGrids.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2016/12/9 16:13:15。
+     1>项目“D:\test\SuperGrids\SuperGrids\SuperGrids.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Release\SuperGrids.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt traderspi.cpp
-         traderspi.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt SuperGrids.cpp
+         SuperGrids.cpp
        ResourceCompile:
          所有输出均为最新。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\BeoData\sourcecode\githome\SuperGrids\Release\SuperGrids.exe" /INCREMENTAL:NO /NOLOGO thostmduserapi.lib thosttraderapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\SuperGrids.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\BeoData\sourcecode\githome\SuperGrids\Release\SuperGrids.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\BeoData\sourcecode\githome\SuperGrids\Release\SuperGrids.lib" /MACHINE:X86 Release\SuperGrids.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\test\SuperGrids\Release\SuperGrids.exe" /INCREMENTAL:NO /NOLOGO thostmduserapi.lib thosttraderapi.lib sqlite3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\SuperGrids.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\test\SuperGrids\Release\SuperGrids.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\test\SuperGrids\Release\SuperGrids.lib" /MACHINE:X86 Release\SuperGrids.res
          Release\Common.obj
+         Release\dbhelper.obj
          Release\mdspi.obj
          Release\stdafx.obj
          Release\SuperGrids.obj
          Release\traderspi.obj
          正在生成代码
          已完成代码的生成
-         SuperGrids.vcxproj -> D:\BeoData\sourcecode\githome\SuperGrids\Release\SuperGrids.exe
+         SuperGrids.vcxproj -> D:\test\SuperGrids\Release\SuperGrids.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\BeoData\sourcecode\githome\SuperGrids\Release\SuperGrids.exe;#1" /manifest Release\SuperGrids.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\test\SuperGrids\Release\SuperGrids.exe;#1" /manifest Release\SuperGrids.exe.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“Release\SuperGrids.unsuccessfulbuild”。
          正在对“Release\SuperGrids.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“D:\BeoData\sourcecode\githome\SuperGrids\SuperGrids\SuperGrids.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“D:\test\SuperGrids\SuperGrids\SuperGrids.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.80
+已用时间 00:00:02.29

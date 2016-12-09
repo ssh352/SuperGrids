@@ -1,11 +1,10 @@
-instrument_id_list=rb1610,TF1609,m1609,MA609
+instrument_id_list=rb1705,TF1703,m1709,MA709
 #下面是模拟环境
 md_ip=tcp://180.168.146.187:10010
 td_ip=tcp://180.168.146.187:10000
 broker_id=9999
 user_id=034023
 password=feb24oct
-#下面是模拟环境2(模拟交易当日16:00到隔日9点回放历史数据)
 md_ip=tcp://180.168.146.187:10030
 td_ip=tcp://180.168.146.187:10031
 broker_id=9999

@@ -7,6 +7,7 @@
 #define MAX_LOADSTRING 100
 #define IDD_TXT0       9000  
 #define IDD_TXT1       9001 
+#define IDD_TXT2       9002 
 
 #define IDD_BTN0       9100  //登陆
 #define IDD_BTN1       9101  //启动
@@ -25,7 +26,7 @@ CtpMdSpi* pMdUserSpi=new CtpMdSpi(pMdUserApi); //创建回调处理类对象MdSpi
 CThostFtdcTraderApi* pTraderUserApi = CThostFtdcTraderApi::CreateFtdcTraderApi();
 CtpTraderSpi* pTraderUserSpi = new CtpTraderSpi(pTraderUserApi);
 
-				CThostFtdcDepthMarketDataField mdf1,mdf2;
+CThostFtdcDepthMarketDataField mdf1,mdf2;
 
 // 全局变量:
 HINSTANCE hInst;								// 当前实例
@@ -55,6 +56,11 @@ VOID CALLBACK TimerProc(HWND hwnd,UINT uMsg,UINT idEvent,DWORD dwTime)
 			<< "," << it->LastPrice <<  "," << it->AskPrice1 
 			<< "," << it->AskVolume1 << "," << it->BidPrice1 
 			<< "," << it->BidVolume1 << "," << it->OpenInterest <<endl;
+			CThostFtdcDepthMarketDataField mdf;
+		    //CThostFtdcDepthMarketDataField pDepthMarketDataTemp;
+			//memset(mdf, 0, sizeof(CThostFtdcDepthMarketDataField));
+			mdf = *it;
+			insertTicks(&mdf);
 		}
 		vcMarketData.erase(it);  
     }  
@@ -176,15 +182,15 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_SUPERGRIDS));
 
-	//OpenDb();
+	openDb();
 	GetConfig();
 
 
 	g_hEvent=CreateEvent(NULL, true, false, NULL); 
 	HANDLE hThread1;
-	HANDLE hThread2;
 	hThread1=CreateThread(NULL,0,MdProc,NULL,0,NULL);
-	hThread2=CreateThread(NULL,0,TraderProc,NULL,0,NULL);
+	//HANDLE hThread2;
+	//hThread2=CreateThread(NULL,0,TraderProc,NULL,0,NULL);
 
 	//MessageBox(hWnd,L" SetTimer !",L"SetTimer",NULL);
 	int timer1 = 1;
@@ -302,18 +308,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			{
 				//pTraderUserSpi->ReqQryInvestorPositionDetail(vcInstIDlist[0]);
 				GTradingInfo.EnableFlag = !GTradingInfo.EnableFlag;
+				//slog = L"已登录";
 				if (GTradingInfo.EnableFlag)
+				{
 					SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"已登录");
+					SendMessage(hTxt[2],WM_SETTEXT,0,(LPARAM)L"已登录");
+				}
 				else
 					SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"未登录");
 
-				if(GTradingInfo.LastPrice != 0)
-				{
-					int ret = pTraderUserSpi->ReqOrderInsert(vcInstIDlist[0], 'S', "O", GTradingInfo.LastPrice + GTradingInfo.GridSize,GTradingInfo.TrxVolumn);
-					ret = pTraderUserSpi->ReqOrderInsert(vcInstIDlist[0], 'B', "O", GTradingInfo.LastPrice - GTradingInfo.GridSize,GTradingInfo.TrxVolumn);
-				}
-				else
-					MessageBox(hWnd,L"gLastPrice is zero !",L"Warning",NULL);
+				//if(GTradingInfo.LastPrice != 0)
+				//{
+				//	int ret = pTraderUserSpi->ReqOrderInsert(vcInstIDlist[0], 'S', "O", GTradingInfo.LastPrice + GTradingInfo.GridSize,GTradingInfo.TrxVolumn);
+				//	ret = pTraderUserSpi->ReqOrderInsert(vcInstIDlist[0], 'B', "O", GTradingInfo.LastPrice - GTradingInfo.GridSize,GTradingInfo.TrxVolumn);
+				//}
+				//else
+				//	MessageBox(hWnd,L"gLastPrice is zero !",L"Warning",NULL);
 			}
 			break;
 		case IDD_BTN1:
@@ -330,12 +340,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				memset(&mdf1,0,sizeof(CThostFtdcDepthMarketDataField));
 				//memset(&mdf2,0,sizeof(CThostFtdcDepthMarketDataField));
 				mdf1.AskPrice1 = 1.111;
-				strcpy(mdf1.ActionDay, "2016-01-01");
-				mdf2 = mdf1;
-				mdf2.BidPrice1 = 333;
-
-
-				MessageBox(hWnd,L"66666 is zero !",L"Warning",NULL);
+				//strcpy(mdf1.ActionDay, "2016-01-01");
+				//mdf2 = mdf1;
+				//mdf2.BidPrice1 = 333;
+				.
+				HANDLE hThread2=CreateThread(NULL,0,TraderProc,NULL,0,NULL);
+				//SendMessage(hTxt[2],WM_SETTEXT,0,(LPARAM)L"交易已启动");
+				//MessageBox(hWnd,L"66666 is zero !",L"Warning",NULL);
 			}
 			break;
 		case IDD_BTN2:
@@ -377,10 +388,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			hBtn[2] = CreateWindow(TEXT("BUTTON"), TEXT("暂停"), WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,topX+WIDTH*10,topY+HEIGHT*2,WIDTH*5,HEIGHT,hWnd,(HMENU)IDD_BTN2, hInst, NULL);
 			hBtn[3] = CreateWindow(TEXT("BUTTON"), TEXT("全清"), WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,topX+WIDTH*15,topY+HEIGHT*2,WIDTH*5,HEIGHT,hWnd,(HMENU)IDD_BTN3, hInst, NULL);
 
-			hLv = CreateWindow(WC_LISTVIEW, TEXT("WC_LISTVIEW"), WS_CHILD | WS_VISIBLE | LVS_REPORT | WS_VSCROLL | WS_HSCROLL,topX,topY+HEIGHT*4,WIDTH*25,HEIGHT*5, hWnd, (HMENU)IDD_LV0, hInst, NULL);
+			//hLv = CreateWindow(WC_LISTVIEW, TEXT("WC_LISTVIEW"), WS_CHILD | WS_VISIBLE | LVS_REPORT | WS_VSCROLL | WS_HSCROLL,topX,topY+HEIGHT*4,WIDTH*25,HEIGHT*5, hWnd, (HMENU)IDD_LV0, hInst, NULL);
 			//initLvRunLog(hLvRunLog);
 			//hWndLBTd = CreateWindow(WC_LISTVIEW, TEXT("WC_LISTVIEW"), WS_CHILD | WS_VISIBLE | LVS_REPORT | WS_VSCROLL | WS_HSCROLL, topX,topY+HEIGHT*15,WIDTH*25,HEIGHT*5, hWnd, (HMENU)IDL_LISTV, hInst, NULL);
 			//initListView(hWndLBTd);
+			hTxt[2] = CreateWindow(TEXT("EDIT"),   TEXT(""),     WS_CHILD|WS_VISIBLE|WS_BORDER|BS_TEXT,topX,topY+HEIGHT*4, WIDTH*25, HEIGHT*5, hWnd, (HMENU)IDD_TXT2, hInst, NULL);
 			UpdateWindow(hWnd);
 		}
 		break;

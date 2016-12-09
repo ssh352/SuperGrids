@@ -35,6 +35,7 @@ extern HWND hTxtMd;
 extern HWND hTxtTd;
 extern HWND hLvRunLog;
 extern HWND hLbl[20];
+extern HWND hTxt[3];
 
 
 void CtpTraderSpi::OnFrontConnected()
@@ -96,6 +97,7 @@ void CtpTraderSpi::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin,
 		int nextOrderRef = atoi(pRspUserLogin->MaxOrderRef);
 		sprintf(orderRef, "%d", ++nextOrderRef);
 		WriteLog("[Hint][OnRspUserLogin]Successed!");
+		SendMessage(hTxt[2],WM_SETTEXT,0,(LPARAM)L"交易已登录");
 		//确认结算
 		ReqSettlementInfoConfirm();
 	}
